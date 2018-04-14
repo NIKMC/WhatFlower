@@ -12,6 +12,7 @@
 		0257F5A820820DCD0092778C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0257F5A620820DCD0092778C /* Main.storyboard */; };
 		0257F5AA20820DCD0092778C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0257F5A920820DCD0092778C /* Assets.xcassets */; };
 		0257F5AD20820DCD0092778C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0257F5AB20820DCD0092778C /* LaunchScreen.storyboard */; };
+		0257F5B520820E1D0092778C /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0257F5B420820E1C0092778C /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0257F5A920820DCD0092778C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0257F5AC20820DCD0092778C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0257F5AE20820DCD0092778C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0257F5B420820E1C0092778C /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				0257F5A920820DCD0092778C /* Assets.xcassets */,
 				0257F5AB20820DCD0092778C /* LaunchScreen.storyboard */,
 				0257F5AE20820DCD0092778C /* Info.plist */,
+				0257F5B420820E1C0092778C /* FlowerClassifier.mlmodel */,
 			);
 			path = WhatFlower;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0257F5B520820E1D0092778C /* FlowerClassifier.mlmodel in Sources */,
 				0257F5A520820DCD0092778C /* ViewController.swift in Sources */,
 				0257F5A320820DCD0092778C /* AppDelegate.swift in Sources */,
 			);
