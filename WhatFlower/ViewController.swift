@@ -11,6 +11,7 @@ import CoreML
 import Vision
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -48,12 +49,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let parameter : [String: String] = [
             "format":"json",
             "action":"query",
-            "prop":"extracts",
+            "prop" : "extracts|pageimages",
             "exintro":"",
             "explaintext":"",
             "titles":title,
             "indexpageids":"",
             "redirects":"1",
+            "pithumbsize":"500"
         ]
         Alamofire.request(wikipediaURL!, method: .get, parameters: parameter).responseJSON { (response) in
             guard response.result.isSuccess else {
@@ -66,6 +68,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let pageId = flowerJSON["query"]["pageids"][0].stringValue
 
             let flowerDescription = flowerJSON["query"]["pages"][pageId]["extract"].stringValue
+            
+            let flowerImageURL = flowerJSON["query"]["pages"][pageId]["thumbnail"]["source"].stringValue
+            
+            self.imagePhoto.sd_setImage(with: URL(string: flowerImageURL))
+            
             self.descriptionFlower.text = flowerDescription
             
         }
@@ -78,7 +85,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             detect(image: convertedCIImage)
             
-            imagePhoto.image = userPickedImage
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
@@ -87,7 +93,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = .photoLibrary
         
     }
 

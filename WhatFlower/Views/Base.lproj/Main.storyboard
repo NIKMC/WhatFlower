@@ -22,20 +22,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JbF-86-YYN">
                                 <rect key="frame" x="0.0" y="64" width="375" height="375"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="c4T-Ie-pQS"/>
                                     <constraint firstAttribute="width" secondItem="JbF-86-YYN" secondAttribute="height" multiplier="1:1" id="iyS-bb-OKt"/>
+                                    <constraint firstAttribute="width" constant="375" id="sKf-ey-mQh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-5O-OJd">
-                                <rect key="frame" x="16" y="458" width="375" height="189"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-5O-OJd">
+                                <rect key="frame" x="16" y="458" width="343" height="189"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.00013300163266424469" green="0.69180798591090942" blue="0.39715484410468038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qXL-5O-OJd" firstAttribute="top" secondItem="JbF-86-YYN" secondAttribute="bottom" constant="19" id="0bx-EU-KFc"/>
-                            <constraint firstItem="qXL-5O-OJd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="16" id="0lJ-dt-dQb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qXL-5O-OJd" secondAttribute="trailing" constant="16" id="0lJ-dt-dQb"/>
                             <constraint firstItem="JbF-86-YYN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZLg-vF-BQB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qXL-5O-OJd" secondAttribute="bottom" constant="20" id="bY0-ge-KhD"/>
                             <constraint firstItem="JbF-86-YYN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="osw-ku-3GA"/>
@@ -46,6 +48,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="WhatFlower" id="o2p-r3-Sxr">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="tAF-Dl-ien">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="photoTapped:" destination="BYZ-38-t0r" id="lRW-WP-NpX"/>
                             </connections>
@@ -68,6 +71,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fy1-Ba-7fK">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
