@@ -63,12 +63,12 @@
 		0257F5A120820DCD0092778C /* WhatFlower */ = {
 			isa = PBXGroup;
 			children = (
+				0257F5AE20820DCD0092778C /* Info.plist */,
 				0257F5A220820DCD0092778C /* AppDelegate.swift */,
 				0257F5A420820DCD0092778C /* ViewController.swift */,
 				0293DEB22083556E007365DC /* Model */,
 				0293DEB120835546007365DC /* Views */,
 				0257F5A920820DCD0092778C /* Assets.xcassets */,
-				0257F5AE20820DCD0092778C /* Info.plist */,
 			);
 			path = WhatFlower;
 			sourceTree = "<group>";
@@ -380,6 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C897U44A5R;
+				HOST_NAME = "https://en.wikipedia.org/w/api.php";
 				INFOPLIST_FILE = WhatFlower/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nikmc-i.WhatFlower";
@@ -396,6 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C897U44A5R;
+				HOST_NAME = "https://en.wikipedia.org/w/api.php";
 				INFOPLIST_FILE = WhatFlower/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nikmc-i.WhatFlower";

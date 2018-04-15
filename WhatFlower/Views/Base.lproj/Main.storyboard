@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,16 +20,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JbF-86-YYN">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JbF-86-YYN" secondAttribute="height" multiplier="1:1" id="iyS-bb-OKt"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-5O-OJd">
+                                <rect key="frame" x="16" y="458" width="375" height="189"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JbF-86-YYN" secondAttribute="bottom" id="4OE-rq-fz3"/>
-                            <constraint firstItem="JbF-86-YYN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SGZ-pP-MCX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JbF-86-YYN" secondAttribute="trailing" id="asJ-ZX-maz"/>
-                            <constraint firstItem="JbF-86-YYN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h6L-EX-DhF"/>
-                            <constraint firstItem="JbF-86-YYN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hUn-DY-Z0e"/>
+                            <constraint firstItem="qXL-5O-OJd" firstAttribute="top" secondItem="JbF-86-YYN" secondAttribute="bottom" constant="19" id="0bx-EU-KFc"/>
+                            <constraint firstItem="qXL-5O-OJd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="16" id="0lJ-dt-dQb"/>
+                            <constraint firstItem="JbF-86-YYN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZLg-vF-BQB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qXL-5O-OJd" secondAttribute="bottom" constant="20" id="bY0-ge-KhD"/>
+                            <constraint firstItem="JbF-86-YYN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="osw-ku-3GA"/>
+                            <constraint firstItem="JbF-86-YYN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rBf-0Q-eRv"/>
+                            <constraint firstItem="qXL-5O-OJd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vcX-Va-FwG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +52,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="descriptionFlower" destination="qXL-5O-OJd" id="YmB-Ds-bj8"/>
                         <outlet property="imagePhoto" destination="JbF-86-YYN" id="WIL-Wu-tpw"/>
                     </connections>
                 </viewController>
